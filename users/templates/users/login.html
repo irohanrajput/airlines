@@ -1,0 +1,20 @@
+{% extends "users/layout.html" %}
+
+{% block body %} 
+
+{% if message %}
+    <div>{{message}}</div>
+{% endif %}
+
+<form action="{% url 'login' %}" method="post">
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="Username">
+    <input type="password" name="password" placeholder="Password">
+    <input type="submit" value="Login">
+</form>
+
+{% endblock %}
+
+
+//post request method: to submit or exchange data
+//get request method: to just fetch and show the data 
