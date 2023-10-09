@@ -1,16 +1,26 @@
 {% extends "users/layout.html" %}
 
-{% block body %} 
+{% block body %}
 
-{% if message %}
-    <div>{{message}}</div>
-{% endif %}
 
-<form action="{% url 'login' %}" method="post">
-    {% csrf_token %}
-    <input type="text" name="username" placeholder="Username">
-    <input type="password" name="password" placeholder="Password">
-    <input type="submit" value="Login">
-</form>
+<div class="form" style="display: inline-block; ">
+    <form action="{% url 'login' %}" method="post" style="display: inline-block;">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
+        <input type="submit" value="Login">
+    </form>
 
-{% endblock %} 
+    <p> or </p>
+
+    <button class="signup" onclick="signUpPage()" style="display: inline-block;"> Create a new account
+    </button>
+
+    <script>
+        function signUpPage() {
+            window.location.href = "{% url 'signup' %}";
+        }
+    </script>
+</div>
+
+{% endblock %}

@@ -7,8 +7,26 @@
 <ul>
     <li>Username: {{request.user.username}}</li>
     <li>Email: {{request.user.email}}</li>
-</ul>
+    <br>
+    <div class="flight_redr">
+        <button onclick="redirectToFlightRedr()">See all flights</button>
+    </div>
+    
 
-<a href="{% url 'logout' % }">Logout</a>
+<div class="logout">
+    <button onclick="logout()">Logout </button>
+
+</div>
+
+
+<script>
+    function redirectToFlightRedr() {
+        window.location.href = "{% url 'flight_redr' %}";
+        }
+
+    function logout() {
+        window.location.href = "{% url 'logout' %}";
+    }
+    </script>
 
 {% endblock %}

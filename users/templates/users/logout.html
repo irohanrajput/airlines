@@ -2,4 +2,24 @@
 
 {% block body %}
 
+{% if message %}
+    <div>{{message}}</div>
+{% endif %}
+<br>
+<div class="login_signup">
+    <button class="backToLogin" onclick="backToLogin()">Sign In </button>
+
+    <button class="backToSignUp" onclick="backToSignUp()">Sign Up </button>
+
+<script>
+    function backToLogin(){
+        window.location.href = "{% url 'login' %}"
+    }
+
+    function backToSignUp() {
+        window.location.href = "{% url 'signup' %}"
+    }
+</script>
+
+</div>
 {% endblock body %}

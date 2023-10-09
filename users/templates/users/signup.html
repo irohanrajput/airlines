@@ -1,0 +1,17 @@
+{% extends "users/layout.html" %}
+
+{% block body %}
+
+<h1> Registrations are closed right now, kindly check back later :) </h1>
+
+<button onclick="backToLogin()"> Go Back to Login Page </button>
+
+<script>
+    function backToLogin(){
+        window.location.href = "{% url 'login' %}"
+    }
+</script>
+
+
+
+{% endblock body %}
