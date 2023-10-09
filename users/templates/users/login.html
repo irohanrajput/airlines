@@ -2,6 +2,10 @@
 
 {% block body %}
 
+{% if message %}
+    <div>{{message}}</div>
+{% endif %}
+
 
 <div class="form" style="display: inline-block; ">
     <form action="{% url 'login' %}" method="post" style="display: inline-block;">
