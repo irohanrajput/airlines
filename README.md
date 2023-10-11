@@ -7,3 +7,6 @@ Web App for airport management system created using Django
 2). install required packages by running $ pip intstall -r requirements.txt
 </br>
 3). run the project: python manage.py runserver
+admin id pass..
+username: irohanrajput 
+password: 123456
