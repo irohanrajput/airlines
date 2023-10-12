@@ -23,7 +23,7 @@ def login_view(request):
 
 def logout_view(request):
     logout(request)
-    return render(request, "users/logout.html", {"message": "Logged out Successfully"
+    return render(request, "users/logout.html", {"message": "Thanks for visiting"
                                                 })
 
 def signup_view(request):
